@@ -1,3 +1,11 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-accent {
+  color: #d59b6a
+}
 /*:root {*/
 /*  --max-width: 1100px;*/
 /*  --border-radius: 12px;*/
@@ -105,3 +113,6 @@
 /*    color-scheme: dark;*/
 /*  }*/
 /*}*/
+  html {
+    margin: 0;
+  }

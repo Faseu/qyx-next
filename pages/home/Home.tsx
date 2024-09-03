@@ -1,6 +1,5 @@
 import React, {useEffect, useRef} from 'react';
 import Lottie from 'lottie-web';
-import  AOS from 'animate.css';
 
 // @ts-ignore
 import {WOW} from 'wowjs';
@@ -19,11 +18,11 @@ export default function Home() {
         });
         if (typeof window !== "undefined") {
             const wow = new WOW({
-                boxClass: 'wow', // animated element css class (default is wow)
-                animateClass: 'animated', // animation css class (default is animated)
-                offset: 40, // distance to the element when triggering the animation (default is 0)
-                mobile: false, // trigger animations on mobile devices (default is true)
-                live: false, // act on asynchronously loaded content (default is true)
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 40,
+                mobile: false,
+                live: false,
             });
             wow.init();
         }
@@ -34,39 +33,50 @@ export default function Home() {
 
     return (
         <main className='page'>
-            <section className='section1'>
+            <section className='section'>
                 <div className="introduced">
-                    <p className='flip-horizontal-bottom1'>Hello, my</p>
-                    <p className='flip-horizontal-bottom2'>name&#x27;s zhang Xingxing.</p>
-                    <p className='flip-horizontal-bottom3'>I&#x27;m a pharmacists</p>
-                    <p className='flip-horizontal-bottom4'>Stack Developer.</p>
+                    <p className='wow flip-horizontal-bottom'>Hello, my</p>
+                    <p className='wow flip-horizontal-bottom'  data-wow-delay="0.4s">name&apos;s Faisal.</p>
+                    <p className='wow flip-horizontal-bottom'  data-wow-delay="0.8s">I&apos;m a Full</p>
+                    <p className='wow flip-horizontal-bottom'  data-wow-delay="1.2s">Stack Developer.</p>
                 </div>
                 <div className="animation_box">
                     <div ref={animationContainer}/>
                 </div>
             </section>
-            <section>
-                <div className="wow flip-horizontal-bottom1" data-wow-duration="1s" data-wow-delay="1s">
-                    <div>
+            <section className='section_other'>
+                <div className='introduction_info'>
+                    <div className='wow fade-in-top'>
+                        <p className='sm:text-[18px] text-[14px] text-base-content uppercase tracking-wider'>Introduction</p>
+                        <h2 className='text-accent font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]'>Hello.</h2>
+                    </div>
+                    <div className='mt-4 text-base-content text-[17px] max-w-3xl leading-[30px]'>
                         <p>Welcome to my profile! My name is David, a software
                             developer dedicated to guiding you through the perils of the web and tech. Technology can be
                             scary,
-                            but it doesn't have to be. Let me help you.</p>
+                            but it doesn&apos;t have to be. Let me help you.</p>
                         <br/>
                         <p>I am currently pursuing a
                             <span>Master of Computer Science from the University of Pennsylvania</span>
                             , and have expertise in
-                            <span>full-stack web development and software engineering.</span>
-                        </p><br/><p>I come from a unique background with a Bachelor's of Science in Kinesiology from the
+                            <span className='text-accent'>full-stack web development and software engineering.</span>
+                        </p><br/><p>I come from a unique background with a Bachelor&apos;s of Science in Kinesiology
+                        from the
                         University of
                         Alberta. As I pursued my studies, I explored my passion for tech by self-teaching myself web
                         development, diving into Linux/Unix, and using cool tools like Vim.</p>
                         <br/>
-                        <p>I am passionate, and love continuous learning. Don't be afraid to reach out!</p>
+                        <p>I am passionate, and love continuous learning. Don&apos;t be afraid to reach out!</p>
                     </div>
+
+                </div>
+                <div className='field_list'>
+                    <div className='green-pink-gradient bg-base-200 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'></div>
+                    <div className='green-pink-gradient bg-base-200 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'></div>
+                    <div className='green-pink-gradient bg-base-200 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'></div>
+                    <div className='green-pink-gradient bg-base-200 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'></div>
                 </div>
             </section>
-
         </main>
     );
 }
