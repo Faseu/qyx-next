@@ -1,7 +1,7 @@
+@import 'swiper/swiper-bundle.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .text-accent {
   color: #d59b6a;
 }

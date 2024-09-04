@@ -2,10 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import Lottie from 'lottie-web';
 import Image from 'next/image';
 import 'hover.css/css/hover-min.css';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import animationData from './animationData.json'; // 动画数据JSON
 // @ts-ignore
 import { WOW } from 'wowjs';
-import animationData from './animationData.json'; // 动画数据JSON
+import { EffectCoverflow, Autoplay, Pagination } from 'swiper/modules';
 
 export default function Home() {
   const animationContainer = useRef(null);
@@ -526,6 +530,238 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="projects">
+          <div>
+            <p className="sm:text-[18px] text-[14px] text-base-content uppercase tracking-wider">
+              My work
+            </p>
+            <h2 className="text-accent font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
+              Featured Projects.
+            </h2>
+          </div>
+
+          <div className="w-full flex">
+            <p className="mt-3 text-base-content text-[17px] max-w-2xl leading-[30px]">
+              These are my featured projects; ones in which I am particular
+              proud of or made me learn something new.
+              <br />
+              <br />
+              <a className="text-lg btn btn-primary" href="/all-projects">
+                SEE ALL PROJECTS
+              </a>
+            </p>
+          </div>
+          <Swiper
+            effect={'coverflow'}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={4}
+            loop={true}
+            coverflowEffect={{
+              rotate: 20,
+              stretch: 20,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={true}
+            modules={[EffectCoverflow, Autoplay, Pagination]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className="bg-base-200 rounded-2xl w-full max-w-md">
+                <div className="relative flex flex-col bg-clip-border rounded-xl text-gray-700 shadow-md bg-base-200 cursor-pointer">
+                  <div className="relative bg-clip-border mx-4 overflow-hidden text-white  shadow-lg -mt-6 flex h-80 align-middle justify-center items-center rounded-2xl">
+                    <Image
+                      className="field_list_item_img"
+                      src="/img/home/experience5.png"
+                      alt=""
+                      width={408}
+                      height={280}
+                      priority
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold p-3 pl-8 text-accent">
+                      One Voice Journal
+                    </h3>
+                    <p className="pl-8 text-base-content">
+                      A journaling mobile application focused on personal and
+                      spiritual reflection.
+                    </p>
+                  </div>
+                  <div className="border-t border-blue-gray-50 flex items-center justify-between p-3 pl-8 pb-6">
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <p className="text-[14px] blue-text-gradient">
+                        #react native
+                      </p>
+                      <p className="text-[14px] green-text-gradient">
+                        #supabase
+                      </p>
+                      <p className="text-[14px] pink-text-gradient">
+                        #watermelondb
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="bg-base-200 rounded-2xl w-full max-w-md">
+                <div className="relative flex flex-col bg-clip-border rounded-xl text-gray-700 shadow-md bg-base-200 cursor-pointer">
+                  <div className="relative bg-clip-border mx-4 overflow-hidden bg-blue-500 text-white shadow-blue-500/40 shadow-lg -mt-6 flex h-80 align-middle justify-center items-center rounded-2xl"></div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold p-3 pl-8 text-accent">
+                      One Voice Journal
+                    </h3>
+                    <p className="pl-8 text-base-content">
+                      A journaling mobile application focused on personal and
+                      spiritual reflection.
+                    </p>
+                  </div>
+                  <div className="border-t border-blue-gray-50 flex items-center justify-between p-3 pl-8 pb-6">
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <p className="text-[14px] blue-text-gradient">
+                        #react native
+                      </p>
+                      <p className="text-[14px] green-text-gradient">
+                        #supabase
+                      </p>
+                      <p className="text-[14px] pink-text-gradient">
+                        #watermelondb
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="bg-base-200 rounded-2xl w-full max-w-md">
+                <div className="relative flex flex-col bg-clip-border rounded-xl text-gray-700 shadow-md bg-base-200 cursor-pointer">
+                  <div className="relative bg-clip-border mx-4 overflow-hidden bg-blue-500 text-white shadow-blue-500/40 shadow-lg -mt-6 flex h-80 align-middle justify-center items-center rounded-2xl"></div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold p-3 pl-8 text-accent">
+                      One Voice Journal
+                    </h3>
+                    <p className="pl-8 text-base-content">
+                      A journaling mobile application focused on personal and
+                      spiritual reflection.
+                    </p>
+                  </div>
+                  <div className="border-t border-blue-gray-50 flex items-center justify-between p-3 pl-8 pb-6">
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <p className="text-[14px] blue-text-gradient">
+                        #react native
+                      </p>
+                      <p className="text-[14px] green-text-gradient">
+                        #supabase
+                      </p>
+                      <p className="text-[14px] pink-text-gradient">
+                        #watermelondb
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="bg-base-200 rounded-2xl w-full max-w-md">
+                <div className="relative flex flex-col bg-clip-border rounded-xl text-gray-700 shadow-md bg-base-200 cursor-pointer">
+                  <div className="relative bg-clip-border mx-4 overflow-hidden bg-blue-500 text-white shadow-blue-500/40 shadow-lg -mt-6 flex h-80 align-middle justify-center items-center rounded-2xl"></div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold p-3 pl-8 text-accent">
+                      One Voice Journal
+                    </h3>
+                    <p className="pl-8 text-base-content">
+                      A journaling mobile application focused on personal and
+                      spiritual reflection.
+                    </p>
+                  </div>
+                  <div className="border-t border-blue-gray-50 flex items-center justify-between p-3 pl-8 pb-6">
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <p className="text-[14px] blue-text-gradient">
+                        #react native
+                      </p>
+                      <p className="text-[14px] green-text-gradient">
+                        #supabase
+                      </p>
+                      <p className="text-[14px] pink-text-gradient">
+                        #watermelondb
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="bg-base-200 rounded-2xl w-full max-w-md">
+                <div className="relative flex flex-col bg-clip-border rounded-xl text-gray-700 shadow-md bg-base-200 cursor-pointer">
+                  <div className="relative bg-clip-border mx-4 overflow-hidden bg-blue-500 text-white shadow-blue-500/40 shadow-lg -mt-6 flex h-80 align-middle justify-center items-center rounded-2xl"></div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold p-3 pl-8 text-accent">
+                      One Voice Journal
+                    </h3>
+                    <p className="pl-8 text-base-content">
+                      A journaling mobile application focused on personal and
+                      spiritual reflection.
+                    </p>
+                  </div>
+                  <div className="border-t border-blue-gray-50 flex items-center justify-between p-3 pl-8 pb-6">
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <p className="text-[14px] blue-text-gradient">
+                        #react native
+                      </p>
+                      <p className="text-[14px] green-text-gradient">
+                        #supabase
+                      </p>
+                      <p className="text-[14px] pink-text-gradient">
+                        #watermelondb
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="bg-base-200 rounded-2xl w-full max-w-md">
+                <div className="relative flex flex-col bg-clip-border rounded-xl text-gray-700 shadow-md bg-base-200 cursor-pointer">
+                  <div className="relative bg-clip-border mx-4 overflow-hidden bg-blue-500 text-white shadow-blue-500/40 shadow-lg -mt-6 flex h-80 align-middle justify-center items-center rounded-2xl"></div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold p-3 pl-8 text-accent">
+                      One Voice Journal
+                    </h3>
+                    <p className="pl-8 text-base-content">
+                      A journaling mobile application focused on personal and
+                      spiritual reflection.
+                    </p>
+                  </div>
+                  <div className="border-t border-blue-gray-50 flex items-center justify-between p-3 pl-8 pb-6">
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <p className="text-[14px] blue-text-gradient">
+                        #react native
+                      </p>
+                      <p className="text-[14px] green-text-gradient">
+                        #supabase
+                      </p>
+                      <p className="text-[14px] pink-text-gradient">
+                        #watermelondb
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
     </main>
